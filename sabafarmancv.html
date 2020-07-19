@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>My-CV</title>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://images-na.ssl-images-amazon.com/images/I/51zLZbEVSTL._SY355_.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+ <!-- <link rel="stylesheet" href="style.css">-->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+        <!-- google fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+       
+        <style>
+
+body {
+  margin: 0;
+  font-family: 'Times New Roman';
+  font-size: 16px;
+  line-height: 1.8em;
+}
+
+a {
+  color: #1C9C94;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
+article {
+  padding:0 1em;
+}
+
+section{
+  margin: 1em;
+  padding: 1em;
+}
+
+header, main, footer {
+  margin: 0 auto;
+}
+
+header {
+  padding: 2em;
+  text-align: center;
+  background-image: url('https://scontent.fisb5-1.fna.fbcdn.net/v/t1.0-0/p640x640/44329367_2451652988210631_3707443442381488128_o.jpg?_nc_cat=103&_nc_sid=e007fa&_nc_ohc=0bSeGrVBt30AX99X_5l&_nc_ht=scontent.fisb5-1.fna&_nc_tp=6&oh=fe41d63254d12423b4ffb85a441fc425&oe=5F3B525B');
+  background-size: cover;
+   background-color: #555;
+  background-position: fixed;
+  color: white;
+}
+
+header section {
+  margin: 0 auto;
+  max-width: 640px;
+}
+
+header img {
+  border-radius: 60%;
+  max-width: 150px;
+}
+
+h1 {
+  text-transform: uppercase;
+  margin: 1em 0;
+  font-weight: bolder;
+}
+
+.class{
+  color: black;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+h3, h4 {
+  font-weight: bold;
+}
+h5 {
+  font-size: 16px;
+  color:skyblue;
+  font-weight: bolder;
+}
+
+main {
+  max-width: 1140px;
+}
+
+main section:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+
+.fab {
+  border: 1px solid white;
+  border-radius: 50%;
+  font-size: 1.5em;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5em;
+  margin: 5px;
+  text-align: center;
+}
+
+a .fab {
+  color: white;
+}
+
+.course, .skills {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.course .title {
+  color: #509e98;
+  -ms-flex: 0 0 33.3%;
+  flex: 0 0 33.3%;
+  max-width: 33%;
+}
+
+
+.course .descrition {
+  -ms-flex: 0 0 66.6%;
+  flex: 0 0 66.6%;
+  max-width: 66.6%;
+}
+
+.course .descrition p {
+  padding-left: 1em;
+}
+
+.skills .column {
+  -ms-flex: 0 0 50%%;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.skills .column ul, ul.job-description {
+  list-style-type: none;
+}
+
+.skills .column ul > li:before {
+  content: "►";
+  padding-right: 0.5em;
+  color: #509e98;
+}
+
+.school, .job-title {
+  text-transform: capitalize;
+}
+
+.school span, .job-title span {
+  color: #889499;
+  text-decoration: underline;
+}
+
+ul.job-description li:before{
+  content: "✔";
+  padding-right: 0.5em;
+  color: #509e98;
+}
+
+@media only screen and (max-width: 768px) {
+  .course {
+    display: block;
+  }
+
+  .course .title, .course .descrition {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .skills {
+    display: block;
+  }
+
+  .skills .column {
+    max-width: 100%;
+  }
+}
+
+/* === NAVIGATION === */
+.header {
+    border-bottom: 1px solid #eee;
+    position: relative;
+    width: 100%;
+    z-index: 998;
+    padding-bottom: 1px;
+    background: #fff;
+}
+
+.header::after {
+    border-bottom:1px solid #eee;
+    width: 100%;
+    position: absolute;
+    content: "";
+    height: 2px;
+    bottom: 1px;
+    left: 0;
+}
+
+.navbar-custom {
+    border: 0;
+    border-radius: 0;
+    margin: 0;
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+.navbar-custom,
+.navbar-custom .dropdown-menu {
+    background: transparent;
+    padding: 0;
+}
+
+.navbar-custom ul li a span{
+    margin-left:5px;
+}
+
+.navbar-custom .dropdown-menu {
+    margin-top:10px;
+    display: block;
+    visibility: hidden;
+    opacity:0;
+    border: 1px solid #ddd;
+    border-top: 2px solid #68c3a3;
+    border-radius: 0;
+    border-bottom: 3px double #ddd;
+    background-color: transparent;
+    -webkit-transition:all 400ms;
+    -moz-transition:all 400ms;
+    -o-transition:all 400ms;
+    transition:all 400ms;
+}
+
+.navbar-right .dropdown-menu {
+  right: auto;
+  left: 0;
+}
+.navbar-custom .navbar-nav > li:hover .dropdown-menu{
+    display: block;
+    opacity:1;
+    visibility: visible;
+    margin-top:-2px;
+}
+
+.navbar-custom .navbar-nav > li > a{
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.navbar-custom .dropdown-menu > li{
+    border-bottom: 1px solid #F0F0F0;
+}
+
+.navbar-custom .dropdown-menu > li:last-child{
+    border-bottom: 0;
+}
+
+.navbar-custom .dropdown-menu > li > a {
+    padding: 10px 20px;
+    color: #282828;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.navbar-custom .nav li.active,
+.navbar-custom .nav li a:hover,
+.navbar-custom .nav li a:focus,
+.navbar-custom .navbar-nav > li.active > a {
+    background: none;
+    outline: 0;
+    color: yellow;
+}
+
+.navbar-custom .navbar-brand {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.navbar-custom .nav .open > a,
+.navbar-custom .dropdown-menu > li > a:hover,
+.navbar-custom .dropdown-menu > li > a:focus {
+    background: #f5f5f5;
+}
+
+.navbar-custom .navbar-toggle .icon-bar {
+    background: #222;
+    box-sizing: border-box;
+  width: 5px;
+  height: 5px;
+  padding: 2px;  
+}
+/*--button styling--*/
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color:orange;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 2px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+          
+</style>
+</head>
+
+<body>
+
+  <header>
+ <section id="home">
+    <div>
+      <img src="https://scontent.fisb5-1.fna.fbcdn.net/v/t31.0-0/p640x640/28947824_2070709606304973_3175825840037788807_o.jpg?_nc_cat=109&_nc_sid=e007fa&_nc_ohc=1rFE8WDPfncAX8QNFYt&_nc_ht=scontent.fisb5-1.fna&_nc_tp=6&oh=79b947853abcfb511638204a46a4848a&oe=5F3BB276" />
+    </div>
+    <h1>Sabah Farman</h1>
+    <p> sabafarman05@gmail.com<br>
+      <b>Hello! I am Sabah Farman. I am a recent bachelor's graduate seeks opportunities which will allow me to grow professionally and personally. I am Cheerful, hardworking, well-spoken and motivated.</b> </p>
+      <a href="https://www.facebook.com/via.fernando.1" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://myaccount.google.com/u/1/" target="_blank">
+        <i class="fab fa-google-plus"></i>
+      </a>
+      <a href="https://www.instagram.com/itss_sabah/" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/sabah-farman-4b6048189/" target="_blank">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </section>
+    
+   <nav class="navbar navbar-custom" >
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#custom-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="custom-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#home" title="Go to Home">Home</a></li>
+            <li><a href="#about" title="Go to Profile">Profile</a></li>
+            <li><a href="#experience" title="Go to Experience">Experience</a></li>
+            <li><a href="#skills" title="Go to Technical Skills">Technical Skills</a></li>
+            <li><a href="#education" title="Go to Education">Education</a></li>
+            <li><a href="#softskills" title="Go to Soft Skills">Soft Skills</a></li>
+            <li><a href="#references" title="Go to References">References</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  </header>
+  <main>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <section id="about">
+      <h3>Profile</h3>
+      <article class='course'>
+        <div class="descrition">
+          <p>Studying in final year of Bachelors Program in Computer System Engineering at Prestigious institution;University of Engineering & Technology, Peshawar,Pakistan. My final Year project is about UAV Based Land Cover Analysis using Remote Sensing. Attended International conference, and published paper in conference. Targeting for enrolling in Master Program to enhance my knowledge for practical endeavors..</p>
+        </div>
+      </article>
+    </section>
+
+ <section id="experience">
+      <h3>Experience</h3>
+        <article class='course'>
+        <div class='title'>
+          <h4>RESEARCH</h4>
+          <h5>Institute Of Space And Technology, Islamabad, Pakistan</h5>
+          <br>  <br>
+        </div>
+        <div class="descrition">
+          <p>Information Retrieval using Natural Language Processing.Published in 6th student research paper conference(SRPC) held in Institute of Space and Technology, Islamabad, Pakistan.</p>
+          <br>
+        </div>
+      </article>
+ <article class='course'>
+        <div class='title'>
+          <h4>WORKSHOPS</h4>
+          <h5>University Of Engineering And Technology, Peshawar, Pakistan</h5>
+          <br>  <br>
+        </div>
+        <div class="descrition">
+          <p>Attended the Cisco Certified Network Associate (CCNA) workshop. I am Router and Switching Certified in 2018.</p>
+          <br>
+        </div>
+      </article>
+      <article class='course'>
+        <div class='title'>
+          <h4>FINAL YEAR PROJECT</h4>
+          <h5>UAV Based Land Cover Analysis Using Remote Sensing</h5>
+          <br> <br>
+        </div>
+        <div class="descrition">
+          <p>The aim of this project is to transmit a live stream from the field to a designated system. This project uses a UAV for such surveys that can obtain high resolution images and videos and transmit them to server in real time with integration of Raspberry Pi. The footage transmitted must be high resolution having low latency and georeferenced in real time .These UAVs do not require a team to operate them and hence the amount of manpower and cost is minimized substantially. UAVs can cover large areas much faster than humans and can gather data in a matter of minutes which would otherwise take hours to collect. Target is to reduce the cost of conducting surveys, save time and increase productivity.</p>
+        </div>
+      </article>
+
+    </section>
+
+    <section id="skills">
+      <h3> Technical Skills</h3>
+      <div class='skills'>
+        <div class='column'>
+          <h4>Good knowledge</h4>
+          <ul>
+            <li>HTML5</li>
+            <li>CSS</li>
+            <li>SQL</li>
+            <li>C/C++</li>
+            <li>Assembly</li>
+            <li>Python</li>
+          </ul>
+        </div>
+        <div class='column'>
+          <h4>Basic knowledge</h4>
+          <ul>
+            <li>jQuery</li>
+           <li>JavaScript</li>
+          </ul>
+        </div>
+        </div>
+        <div>
+          <h4>TOOLS</h4>
+
+          <div class="container">
+             <div class="row">
+                 <div class="col-sm-8 m-auto">
+
+         <!-- SLIDER WITH CAPTIONS -->
+        <div id="slider4" class="carousel slide mb-5" data-ride="carousel">
+          <ol class="carousel-indicators">
+          <li class="active" data-target="#slider4" data-slide-to="0"></li>
+          <li data-target="#slider4" data-slide-to="1"></li>
+          <li data-target="#slider4" data-slide-to="2"></li>
+          <li data-target="#slider4" data-slide-to="3"></li>
+          <li data-target="#slider4" data-slide-to="4"></li>
+          </ol>  
+          <div class="carousel-inner">
+          <div class="carousel-item active">
+              <img class="d-block img-fluid" height="200" width="200" src="https://www.labcenter.com/images/logo.png" alt="Proteus">
+              <div class="carousel-caption">
+                <h2 class="class">Proteus</h2>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block img-fluid" height="200" width="200" src="https://file.elecfans.com/web1/M00/4E/CE/o4YBAFrLEZCAcHBHAAAlI7PhAhc373.jpg" alt="Keil">
+              <div class="carousel-caption">
+                <h2 class="class">Keil</h2>
+            </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block img-fluid" height="200" width="200" src="https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_d5738f5e7922b4552c3ba543a2b9dee6/simulink.jpeg" alt="MATLAB">
+              <div class="carousel-caption">
+                <h2 class="class">MATLAB</h2>
+              </div>
+            </div>
+               <div class="carousel-item">
+              <img class="d-block img-fluid" height="200" width="200" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSjGlcrcpS4J6KAlWd3I-4RDOhJr4XU4w29FVqhd5pCLP5aTCr7&usqp=CAU" alt="Wamp Server">
+              <div class="carousel-caption">
+                <h2 class="class">Wamp Server</h2>
+              </div>
+            </div>
+            <div class="carousel-item">
+            <div class="container">
+              <img class="d-block img-fluid" height="200" width="200" src="https://websetnet.net/wp-content/uploads/2018/01/the-snap-app-of-sublime-text-3-available-for-test.png" alt="sublimetext"> </div>
+              <div class="carousel-caption">
+                <h2 class="class">Sublime Text</h2>
+              </div>
+            </div>
+          </div>
+          <!--controls-->
+          <a href="#slider4" class="carousel-control-prev" data-slide="prev">
+            <span class="carousel-control-prev-icon">
+          </a>
+          <a href="#slider4" class="carousel-control-next" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+        </div>
+
+
+           </div>
+         </div>
+       </div>
+<div style="margin-top:50px;"></div>
+    </section>
+
+    <section id="education">
+      <h3>Education</h3>
+      <article>
+        <div class='school'>
+         <strong>University Of Engineering And Technology</strong> 
+         <p><span>2016-2020</span><br>
+          Bachelor Degree of Computer Systems Engineering<br>
+           Peshawar, Pakistan.</p>
+        </div>
+      </article>
+      <article>
+        <div class='school'>
+         <strong>Jinnah College for Women</strong>
+          <p><span>2012-2014</span> <br>
+          Program: Intermediate (High School)<br>
+          Main subjects: Mathemathics , Physics , Chemistry<br>
+          Peshawar,Pakistan</p>
+        </div>
+      </article>
+      <article>
+        <div class='school'>
+         <strong>Frontier Youths' Academy</strong>
+          <p><span>2010-2012</span> <br>
+          Program: Matriculation <br>
+          Main subjects: Biology, Mathemathics , Physics , Chemistry <br>
+          Peshawar,Pakistan</p>
+        </div>
+      </article>
+    </section>
+    <section id="softskills">
+      <h3>Soft Skills</h3>
+      <article>
+        <div>
+          <ul class="job-description">
+            <li>Management</li>
+            <li>Interpersonal</li>
+            <li>Leadership </li>
+            <li>Documentation </li>
+            <li>Presentation </li>
+          </ul>
+        </div>
+      </article>
+      <article>
+        <h5>Co-Curricular Activities</h5>
+        <div>
+          <ul class = "job-description">
+            <li>Female President of computer society UETP</li>
+            <li>Ex- Co ordinator of computer society UETP</li>
+            <li>Compering in school, college, university</li>
+            <li>Prefect in school </li>
+            <li>Module head Megabuz 19 (5 days event having different outdoor indoor sports and IT modules and competitions)</li>
+            <li>Organizer in 7up Fiesta (2 day Food street festival and live concert)</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+    <section id="references">
+       <h3>References</h3>
+       <article>
+         <div>
+           <h2 class="class"> Dr.Laiq Hasan</h2>
+           <p> Chairman, <br> 
+           Department of Computer Systems Engineering,<br> 
+           University of Engineering & Technology,<br> 
+           Peshawar, Pakistan <br>
+           laiqhasan@uetpeshawar.edu.pk <br>
+            +92-332-4454677</p>
+         </div>
+         <div>
+           <h2 class="class"> Dr. Nasruminallah</h2>
+           <p> Chairman, <br> 
+           Department of Computer Science,<br> 
+           University of Engineering & Technology,<br> 
+           Peshawar, Pakistan <br>
+           minallah.nasru@gmail.com <br>
+            +92-345-2757576</p>
+         </div>
+       </article>
+    </section>
+  </main>
+
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+  
+       <script>
+    $('.carousel').carousel({
+      interval:3000,
+      pause: 'hover',
+      wrap: true
+    });
+  </script>
+  <!-- script for button -->
+  <script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+// When the user scrolls down 200px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+</body>
+
+</body>
+</html>
